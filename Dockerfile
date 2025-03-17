@@ -1,15 +1,10 @@
-FROM python:3.11.4
+FROM python:3.12
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-WORKDIR /crudhw
+COPY . .
 
-COPY /. .
-COPY app.py .
-COPY dbquery.py .
-COPY extras.py .
-COPY http_code.py .
-COPY creds.py .
+EXPOSE 6080
 
-COPY /requirements.txt .
-
-RUN pip install -r requirements.txt
-CMD ["gunicorn", "--preload"]
+CMD ["python", "app.py"]

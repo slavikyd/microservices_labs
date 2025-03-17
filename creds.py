@@ -11,5 +11,3 @@ load_dotenv()
 app = Flask(__name__)
 app.json.ensure_ascii = False
 
-
-FLASK_PORT = int(getenv('FLASK_PORT', default=DEFAULT_PORT))

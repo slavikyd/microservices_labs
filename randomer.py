@@ -34,7 +34,6 @@ def random_contact():
 def random_phone():
     """Generate a random Phone instance."""
     phone = Phone(random_phone_number())
-    #phone.number = 
     return phone
 
 def random_group():

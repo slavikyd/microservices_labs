@@ -2,7 +2,7 @@
 from flask import request
 import randomer
 import http_code
-from creds import FLASK_PORT, app
+from creds import app
 from extras import WELCOME_PAGE, body_check
 
 
@@ -143,4 +143,4 @@ def delete_group():
 
 
 if __name__ == '__main__':
-    app.run(port=FLASK_PORT)
+    app.run(host='0.0.0.0', port=6080)

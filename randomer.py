@@ -26,7 +26,7 @@ def random_contact():
     contact.Username = random_string()
     contact.GivenName = random_string()
     contact.FamilyName = random_string()
-    contact.phone = random_phone()
+    contact.phone = random_phone().to_dict()
     contact.email = f"{random_string()}@example.com"
     contact.birthdate = random_date()
     return contact

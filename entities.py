@@ -15,6 +15,8 @@ class Phone:
         self._number = new_number
     def to_dict(self):
         return {'number': self.number}
+    def __str__(self):
+        return f'{self.number}'
 
 class Contact:
     id: int
@@ -41,7 +43,7 @@ class Group:
     id: int
     title: str
     description: str
-    contacts: list[int]
+    contacts: list[Contact]
     def to_dict(self):
         return {
             'id': self.id,
